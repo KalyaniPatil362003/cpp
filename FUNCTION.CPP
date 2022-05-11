@@ -1,38 +1,30 @@
 #include<iostream.h>
 #include<conio.h>
-
-template<class K>
-void swap(K x,K y)
+class Demo
 {
-  K k;
-  k=x;
-  x=y;
-  y=k;
-
-  cout<<"x= "<<x<<endl;
-  cout<<"y= "<<y<<endl;
-
+protected:int a,b;
+	double p,q,r;
+public: void add(int x,int y);
+	void add(double l,double m,double n);
+};
+void Demo::add(int x,int y)
+{
+a=x;
+b=y;
+cout<<"Multiplication is:"<<a*b<<endl;
+}
+void Demo::add(double l,double m,double n)
+{
+p=l;
+q=m;
+r=n;
+cout<<"Addition is:"<<p+q+r;
 }
 void main()
 {
- float l,m;
- int x,y;
- clrscr();
- cout<<"Value of L:";
- cin>>l;
- cout<<"Value of M:";
- cin>>m;
- cout<<"Value of X:";
- cin>>x;
- cout<<"Value of Y:";
- cin>>y;
- cout<<"----------------value Befor Swap-------------------------"<<endl;
- cout<<"L="<<l<<endl;
- cout<<"M="<<m<<endl;
- cout<<"X="<<x<<endl;
- cout<<"Y="<<y<<endl;
- cout<<"------------------------------value After swap----------------------"<<endl;
- swap(x,y);
- swap(l,m);
- getch();
+clrscr();
+Demo d;
+d.add(10,20);
+d.add(2.5,2.5,2.5);
+getch();
 }
